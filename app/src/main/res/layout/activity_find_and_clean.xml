@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindAndClean"
+    tools:ignore="MergeRootFrame">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="474dp"
+        android:id="@+id/listView"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="-0.0sp"
+        android:layout_gravity="center_horizontal|top" />
+
+    <Button
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:text="Rename"
+        android:id="@+id/button2"
+        android:layout_gravity="center_horizontal|bottom"
+        android:clickable="true"
+        android:onClick="cleanFiles" />
+</FrameLayout>
