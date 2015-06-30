@@ -81,6 +81,11 @@ public class FindAndClean extends Activity {
         // get the camera directory
         String[] files = dir.list();
 
+        if (files == null) {
+            Toast.makeText(this, "Can't find the correct directory", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         // Go through each file and stort out the ones with strange chars
         for (String s : files) {
             if (s.matches(".*"+illegalChars+".*")) {
@@ -123,8 +128,8 @@ public class FindAndClean extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_about) {
+            Toast.makeText(this, R.string.about_text, Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
